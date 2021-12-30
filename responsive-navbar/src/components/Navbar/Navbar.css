@@ -1,0 +1,27 @@
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+nav{
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  border-bottom: 1px solid #f4f4f4;
+}
+.nav-toggle{
+  display: none;
+}
+
+.nav-links{
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 724px){
+  .nav-toggle{
+    display: block;
+    height: 2rem;
+    width: 2rem;
+  }
+}
