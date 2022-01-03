@@ -1,0 +1,21 @@
+.item{
+  width: 100%;
+  border: 1px solid rgb(185, 185, 185);
+  /*min-height: 22rem;*/
+  display: flex;
+  flex-direction: column;
+  border-radius: .3rem;
+  overflow: hidden;
+}
+.item-img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.item-desc{
+  width: 100%;
+  padding: 1rem;
+  text-align: start;
+}
