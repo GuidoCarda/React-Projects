@@ -1,15 +1,16 @@
 import React from 'react'
 import './Item.css'
+import ItemCount from '../ItemCount/ItemCount'
 
-const Item = ({src}) => {
-  console.log(src)
+const Item = ({product, onAdd}) => {
   return (
-    <div className="item">
-      <img className="item-img" src={src} alt="" />
+    <div className='item'>
+      <img className='item-img' src={product.pictureURL} alt="" />
       <div className="item-desc">
-        <h3>Titulo de ejemplo</h3>
-        <p>Descripcion de ejemplo</p>
+        <h3>{product.title}</h3>
+        <p>${product.price}</p>
       </div>
+      <ItemCount stock={product.stock} initial={0} onAdd={onAdd}/>
     </div>
   )
 }

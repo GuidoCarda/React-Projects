@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
-import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import { FaBars } from 'react-icons/fa'
+import CartWidget from '../CartWidget/CartWidget';
+
 const NavBar = () => {
-  
-  const [isOpen, setIsOpen] = useState(false); 
-  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => setIsOpen(!isOpen)
+
   return (
     <nav>
       <div className="nav-container">
-        <span className="nav-logo">MisTec</span>
+       <span className='nav-logo'>MISTEC</span>
         <ul className={`nav-links ${isOpen&&'active'}`}>
-          <li>Componentes</li>
-          <li>Perifericos</li>
-          <li>Notebooks</li>
+          <li><a href="/">componentes</a></li>
+          <li><a href="/">perifericos</a></li>
+          <li><a href="/">notebooks</a></li>
         </ul>
-
-        <div className="nav-btns">
-          <button className="navToggle-btn" onClick={()=>setIsOpen(!isOpen)}><FaBars/></button>
-          <button className='login-btn'>Login</button>
-          <CartWidget/>   
+  
+        <div className="nav-buttons">
+          <button className="toggle-btn" onClick={handleToggle}> <FaBars/> </button>
+          <button className="cart-btn"><CartWidget/></button>
         </div>
-       
       </div>
     </nav>
   )

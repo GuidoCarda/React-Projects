@@ -1,109 +1,118 @@
+
+html{
+  color:rgb(36, 39, 53);
+}
+
 nav{
-  background: rgb(236, 236, 236);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   height: 4rem;
+  width: 100%;
+  position: relative;
+  border: 1px solid rgb(236, 236, 236);
 }
 
 .nav-container{
   width: min(1200px, 90vw);
-  height: 100%;
   margin-inline: auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav-links{
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li{
-  background: lightgray;
-  padding: .5rem 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: .3rem;
-  line-height: 1rem;
-}
-
-.nav-links li:hover{
-  background:rgb(155, 177, 214);
-  color:rgb(9, 33, 71);
-}
-
-
 .nav-logo{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
   font-weight: bold;
 }
 
-
-.nav-btns{
+.nav-links{
+  list-style: none;
   display: flex;
-  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links li > a {
+  display: block;
+  height: 2rem;
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  font-size: 1rem;
+  line-height: 1rem; 
+  background: rgb(234, 235, 238);
+}
+
+.nav-links li > a:hover {
+  background: rgb(220, 222, 231);
+}
+
+.nav-links li > a:active {
+  background: rgb(64, 86, 161);
+  color: white;
+}
+
+
+.nav-buttons{
+  display: flex;
   gap: .5rem;
 }
 
-.navToggle-btn {
+.nav-buttons > button{
   height: 2rem;
   width: 2rem;
+  display: grid;
   place-content: center;
-  background: white;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  border-radius: .3rem;
+  border: none;
+  background: rgb(234, 235, 238);
+  user-select: none;
+}
+
+.nav-buttons .cart-btn{
+  position: relative;
+}
+
+.nav-buttons .cart-btn:active{
+  transform: translateY(3px);
+}
+
+.nav-buttons .toggle-btn{
   display: none;
 }
 
-.login-btn{
-  border: none; 
-  padding: .5rem 1rem;
-  height: 2rem;
-  outline: none;
-  cursor: pointer;
-  font-size: 1rem;
-  background: rgb(72, 110, 170);
-  color: rgb(250, 250, 250);
-  border-radius: .3rem;
-  font-weight: 700;
-  line-height: 1rem;
-}
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 620px) {
   .nav-links{
-    flex-direction: column;
-    gap: 2rem;
-    padding-block: 2rem;
     position: absolute;
-    top: -100%;
     left: 0;
     right: 0;
-    width: 100%;
-    text-align: center;
-    background: black;
-    display: none;
+    top: 99%;
+    flex-direction: column;
+    padding: 1rem;
+    background: white;
+    width: 90vw;
+    margin-inline: auto;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease-in;
   }
 
-  .nav-links li{
+  .nav-links li > a{
+    height: 3.5rem;
+    width: 100%;
     display: inline-flex;
-    width: 90%;
-    margin-inline: auto;
     align-items: center;
-    justify-content: center;
-    height: 3rem;
+    font-size: 1.12rem;
   }
-  .navToggle-btn {
+
+  .nav-buttons .toggle-btn{
     display: grid;
   }
-  
 }
 
-.active{
-  display: flex;
-  top: 99%;
-  transition: top 1s ease-in;
-}
 
+.nav-links.active{
+  opacity: 1;
+  visibility: visible;
+}
