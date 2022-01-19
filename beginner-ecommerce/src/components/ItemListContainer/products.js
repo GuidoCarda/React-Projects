@@ -16,7 +16,7 @@ const products = [
     pictureURL: 'https://www.tera.gt/wp-content/uploads/2021/12/MOUSE-GAMING-ABYSSUS-V2-ESSENTIAL-AMBIDIESTRO-RAZER_Ratones_6763_1.png' 
   },
   {
-    id: 'dlwda1',
+    id: '12wda1',
     title: 'RTX 3080',
     description: 'Esto es una descripcion de ejemplo',
     stock: 3,
@@ -32,7 +32,7 @@ const products = [
     pictureURL: 'https://www.venex.com.ar/products_images/1601297709_k552rgbsp3512x512.png' 
   },
   {
-    id: 'dasda1',
+    id: 'd43da1',
     title: 'Logitech g PRO',
     description: 'Esto es una descripcion de ejemplo',
     stock: 5,
@@ -40,7 +40,7 @@ const products = [
     pictureURL: 'https://logitechar.vteximg.com.br/arquivos/ids/157593-1000-1000/G733-FOB-Blk.png?v=637358672115100000' 
   },
   {
-    id: 'dac1f1',
+    id: 'da1661',
     title: 'Razer Deathadder',
     description: 'Esto es una descripcion de ejemplo',
     stock: 18,
